@@ -18,7 +18,7 @@
             <label class="form-label">País:</label>
             <select class="form-control" formControlName="pais">
                 <option value=""> -- Seleccione Pais -- </option>
-                <option *ngFor="let pais of paises" [value]="pais.cca3| lowercase"> {{ pais.name.common }} </option>
+                <option *ngFor="let pais of paises" [value]="pais.cca3"> {{ pais.name }} </option>
             </select>
         </div>
     </div>
