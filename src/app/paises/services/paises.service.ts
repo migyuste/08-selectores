@@ -25,11 +25,11 @@ export class PaisesService {
     return this.http.get<PaisSmall[]>(url)
   }
 
-  getPaisPorCodigo(codigo: string): Observable<PaisAll | null> {
+  getPaisPorCodigo(codigo: string): Observable<PaisAll[] | null> {
     if (!codigo) {
-      return of(null)
+      return of([])
     }
     const url = `${this.baseUrl}/alpha/${codigo}`;
-    return this.http.get<PaisAll>(url);
+    return this.http.get<PaisAll[]>(url);
   }
 }
